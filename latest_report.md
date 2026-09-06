@@ -1,6 +1,6 @@
 # Paper-only research dashboard
 
-**Generated:** 2026-09-06T08:08:05+00:00  
+**Generated:** 2026-09-06T08:13:14+00:00  
 **As-of close:** 2026-09-05  
 **Safety boundary:** simulated EUR portfolio only; no account connection or order submission exists.
 
@@ -39,6 +39,14 @@
 | tail_risk_is_measured_under_dependence_and_execution_stress | observing_not_a_trade_instruction | Observed returns should be examined under dependence, gap, and impaired-exit sensitivity without assuming a perfect stop fill. |
 | pre_registered_challengers_require_robustness_checks | observing | Risk-overlay variants must be pre-registered, isolated, cost-stressed, and checked for selection fragility before review. |
 | hourly_stop_latency_is_observation_only | observation_only_not_an_execution_model | Validated hourly closes can quantify a delayed-close stop proxy but cannot guarantee an intraday exit or liquidity. |
+
+## Research diary — public-safe evidence log
+
+Each dated entry records what was tested, the result, and why the mandate did not change. Results are observations, not investment instructions or forecasts.
+
+| Date | What ran | Finding | Risk / challenger result | Decision |
+| --- | --- | --- | --- | --- |
+| 2026-09-05 | Validated completed BTC-EUR and ETH-EUR daily closes; reran the fixed, cost-aware walk-forward protocol; kept the paper sleeves unchanged. | Best active-sleeve 180-day diagnostic return was Trend 20/60 (+8.85%); capped equal weight returned +12.52%. | The two-day impaired-exit sensitivity ended below its starting value in 82.20% of resampled paths; this is not a forecast. 2 of 2 pre-registered challengers were rejected by their fixed gates and remain isolated. | No mandate change: research cannot alter sleeves, limits, costs, assets, or create a live order route. |
 
 ## Pre-registered challenger evidence
 
