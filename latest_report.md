@@ -1,18 +1,18 @@
 # Paper-only research dashboard
 
-**Generated:** 2026-10-05T00:30:40+00:00  
-**As-of close:** 2026-10-04  
+**Generated:** 2026-10-09T00:49:22+00:00  
+**As-of close:** 2026-10-08  
 **Safety boundary:** simulated EUR portfolio only; no account connection or order submission exists.
 
 ## Portfolio
 
 | Metric | Value |
 | --- | --- |
-| Virtual equity | €10,679.30 |
+| Virtual equity | €10,262.67 |
 | Starting budget | €10,000.00 |
-| Daily return | +1.60% |
+| Daily return | -3.90% |
 | Cash | €5,148.18 |
-| As-of close | 2026-10-04 |
+| As-of close | 2026-10-08 |
 | Mode | Paper only — no order route |
 
 ## Fixed paper sleeves
@@ -23,10 +23,10 @@
 
 | Strategy | Return | Max drawdown | Score | Days |
 | --- | --- | --- | --- | --- |
-| Trend 50/150 | +1.28% | -7.02% | -12.76% | 181 |
-| Trend 20/60 | +11.83% | -12.82% | -13.81% | 181 |
-| Relative momentum 90d | -0.36% | -7.96% | -16.28% | 181 |
-| Defensive equal weight | +14.53% | -18.42% | -22.30% | 181 |
+| Trend 50/150 | -0.26% | -7.02% | -14.31% | 181 |
+| Trend 20/60 | +9.12% | -12.82% | -16.52% | 181 |
+| Relative momentum 90d | -1.68% | -7.96% | -17.60% | 181 |
+| Defensive equal weight | +11.76% | -18.42% | -25.08% | 181 |
 
 ## Daily system hypotheses
 
@@ -46,6 +46,7 @@ Each dated entry records what was tested, the result, and why the mandate did no
 
 | Date | What ran | Finding | Risk / challenger result | Decision |
 | --- | --- | --- | --- | --- |
+| 2026-10-08 | Validated completed BTC-EUR and ETH-EUR daily closes; reran the fixed, cost-aware walk-forward protocol; kept the paper sleeves unchanged. | Best active-sleeve 180-day diagnostic return was Trend 20/60 (+9.12%); capped equal weight returned +11.76%. | The two-day impaired-exit sensitivity ended below its starting value in 60.90% of resampled paths; this is not a forecast. 2 of 2 pre-registered challengers were rejected by their fixed gates and remain isolated. | No mandate change: research cannot alter sleeves, limits, costs, assets, or create a live order route. |
 | 2026-10-04 | Validated completed BTC-EUR and ETH-EUR daily closes; reran the fixed, cost-aware walk-forward protocol; kept the paper sleeves unchanged. | Best active-sleeve 180-day diagnostic return was Trend 20/60 (+11.83%); capped equal weight returned +14.53%. | The two-day impaired-exit sensitivity ended below its starting value in 47.97% of resampled paths; this is not a forecast. 2 of 2 pre-registered challengers were rejected by their fixed gates and remain isolated. | No mandate change: research cannot alter sleeves, limits, costs, assets, or create a live order route. |
 | 2026-09-23 | Validated completed BTC-EUR and ETH-EUR daily closes; reran the fixed, cost-aware walk-forward protocol; kept the paper sleeves unchanged. | Best active-sleeve 180-day diagnostic return was Trend 20/60 (+17.81%); capped equal weight returned +20.65%. | The two-day impaired-exit sensitivity ended below its starting value in 35.73% of resampled paths; this is not a forecast. 2 of 2 pre-registered challengers were rejected by their fixed gates and remain isolated. | No mandate change: research cannot alter sleeves, limits, costs, assets, or create a live order route. |
 | 2026-09-22 | Validated completed BTC-EUR and ETH-EUR daily closes; reran the fixed, cost-aware walk-forward protocol; kept the paper sleeves unchanged. | Best active-sleeve 180-day diagnostic return was Trend 20/60 (+16.78%); capped equal weight returned +18.71%. | The two-day impaired-exit sensitivity ended below its starting value in 36.87% of resampled paths; this is not a forecast. 2 of 2 pre-registered challengers were rejected by their fixed gates and remain isolated. | No mandate change: research cannot alter sleeves, limits, costs, assets, or create a live order route. |
@@ -73,11 +74,11 @@ Each dated entry records what was tested, the result, and why the mandate did no
 | Metric | Value |
 | --- | --- |
 | CSCV-style status | observing_not_a_promotion_rule |
-| CSCV estimated selection fragility | +13.10% |
+| CSCV estimated selection fragility | +26.98% |
 | CSCV variants / observations | 3 / 180 |
 | Deflated-Sharpe status | observing_not_a_promotion_rule |
 | Multiple-testing trials counted | 3 |
-| Sharpe exceeds trial hurdle | +32.95% |
+| Sharpe exceeds trial hurdle | +25.48% |
 | Rejected challenger results | 2 |
 
 ## Hourly stop-latency research — observation only
@@ -87,7 +88,7 @@ Each dated entry records what was tested, the result, and why the mandate did no
 | Study status | observation_only_not_an_execution_model |
 | Validated hourly observations | 720 |
 | Stop proxy | +3.00% / 24h horizon |
-| Worst next-hour gap vs stop | -2.48% |
+| Worst next-hour gap vs stop | -3.28% |
 | Method | hourly_close_trigger_then_next_completed_hour_close_exit |
 
 ## Tail-risk diagnostics — observation only
@@ -95,17 +96,17 @@ Each dated entry records what was tested, the result, and why the mandate did no
 | Metric | Value |
 | --- | --- |
 | Diagnostic status | observing_not_a_trade_instruction |
-| Cost-aware max drawdown | -9.15% |
-| Annualized volatility | +11.90% |
+| Cost-aware max drawdown | -9.14% |
+| Annualized volatility | +12.20% |
 | Worst observed daily return | -2.25% |
-| Historical CVaR (worst 5% days) | -1.23% |
+| Historical CVaR (worst 5% days) | -1.34% |
 | Bootstrap paths / horizon | 3000 / 365 days |
-| Standard: chance of ending loss | +24.60% |
+| Standard: chance of ending loss | +35.97% |
 | Standard: chance ending below 50% | +0.00% |
-| Gap stress: chance of ending loss | +33.73% |
+| Gap stress: chance of ending loss | +46.83% |
 | Gap stress: chance ending below 50% | +0.00% |
 | Gap stress: chance near zero | +0.00% |
-| Two-day dislocation: chance ending loss | +47.97% |
+| Two-day dislocation: chance ending loss | +60.90% |
 | Two-day dislocation: chance ending below 50% | +0.00% |
 | Two-day dislocation: chance near zero | +0.00% |
 
@@ -116,9 +117,9 @@ Each dated entry records what was tested, the result, and why the mandate did no
 | Canonical | Kraken public OHLC API |
 | Reference | Coinbase Exchange public candles API |
 | Completed observations | 720 |
-| Latest completed candle | 2026-10-04 |
+| Latest completed candle | 2026-10-08 |
 | BTC-EUR cross-source deviation | +0.05% |
-| ETH-EUR cross-source deviation | +0.07% |
+| ETH-EUR cross-source deviation | +0.17% |
 
 ## Interpretation
 
