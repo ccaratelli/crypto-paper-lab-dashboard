@@ -1,6 +1,6 @@
 # Paper-only research dashboard
 
-**Generated:** 2026-10-25T00:30:46+00:00  
+**Generated:** 2026-10-25T01:30:25+00:00  
 **As-of close:** 2026-10-24  
 **Safety boundary:** simulated EUR portfolio only; no account connection or order submission exists.
 
